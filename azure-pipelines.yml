@@ -17,8 +17,6 @@ resources:
 jobs:
 - job: Job_1
   displayName: Agent job 1
-  pool:
-    name: Azure Pipelines
   steps:
   - checkout: self
     clean: true
