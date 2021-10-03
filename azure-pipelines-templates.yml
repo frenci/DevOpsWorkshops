@@ -17,7 +17,7 @@ steps:
     command: restore
     projects: '**/*.csproj'
 
-- template: ./dotnet-build-template.yml
+- template: dotnet-build-template.yml
 
 - task: DotNetCoreCLI@2
   displayName: Publish
