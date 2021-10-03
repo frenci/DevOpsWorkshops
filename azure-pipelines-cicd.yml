@@ -4,6 +4,8 @@ pool:
 variables:
 - name: BuildParameters.RestoreBuildProjects
   value: '**/*.csproj'
+- name: BuildConfiguration
+  value: Release
 
 trigger:
   branches:
