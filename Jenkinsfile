@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Hello'
         git(credentialsId: '	github', url: 'https://github.com/mskuratowski/DevOpsWorkshops.git', branch: 'master')
-        dotnetRestore(configfile: 'Release')
+        dotnetRestore()
         dotnetBuild(configuration: 'Release')
         dotnetPublish(configuration: 'Release')
       }
