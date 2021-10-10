@@ -10,7 +10,7 @@ dotnet clean
 dotnet build --configuration Release
 dotnet publish
 '''
-        archiveArtifacts '**'
+        dotnetBuild(configuration: 'Release')
       }
     }
 
