@@ -5,8 +5,11 @@ pipeline {
       steps {
         echo 'Hello'
         git(credentialsId: '	github', url: 'https://github.com/mskuratowski/DevOpsWorkshops.git', branch: 'master')
-        sh 'dotnet build --configuration Release'
-        archiveArtifacts 'drop'
+        sh '''dotnet restore
+dotnet clean
+dotnet build --configuration Release
+dotnet publish
+'''
       }
     }
 
