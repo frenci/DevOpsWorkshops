@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Hello'
-        azureWebAppPublish(azureCredentialsId: 'azure-devops-connection', appName: 'app-weu-devops-ms', resourceGroup: 'rg-weu-devops-ms')
+        git(credentialsId: '	github', url: 'https://github.com/mskuratowski/DevOpsWorkshops.git', branch: 'master')
       }
     }
 
