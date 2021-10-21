@@ -8,6 +8,7 @@ pipeline {
         dotnetRestore()
         dotnetBuild(configuration: 'Release')
         dotnetPublish(configuration: 'Release')
+        sh 'echo \'Hello World\''
       }
     }
 
